@@ -125,3 +125,7 @@ button[kind="secondary"]:hover, button[kind="primary"]:hover {
     border-color: #C79A5D !important;
     box-shadow: 0 4px 15px rgba(199, 154, 93, 0.4) !important;
 }
+
+.block-container {
+    padding-top: 0 !important;
+}
