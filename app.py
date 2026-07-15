@@ -125,7 +125,6 @@ else:
         st.markdown(f"""
     <div class="mempelai-box">
         <img src="data:image/jpeg;base64,{img}" class="foto-mempelai">
-
         <h3>Andi Pratama</h3>
         <p>Putra Pertama dari</p>
         <p><strong>Bapak Ahmad & Ibu Nur</strong></p>
