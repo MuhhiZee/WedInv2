@@ -1,5 +1,24 @@
 /* Import Font Premium & Romantis */
-@import url('https://googleapis.com');
+/*@import url('https://googleapis.com');*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+/* Desktop */
+.stApp {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.stApp{
+    background-image: url("background1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+}
 
 /* Global Font Override */
 .stMarkdown, div[data-testid="stMarkdownContainer"] {
