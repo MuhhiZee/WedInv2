@@ -2,15 +2,6 @@
 /*@import url('https://googleapis.com');*/
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
-.foto-mempelai{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #C79A5D;
-    display:block;
-    margin:0 auto 20px auto;
-}
 
 /* Hilangkan header Streamlit */
 header[data-testid="stHeader"] {
