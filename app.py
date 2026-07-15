@@ -7,6 +7,7 @@ def img_to_base64(path):
         return base64.b64encode(f.read()).decode()
 
 img = img_to_base64("images/groom.jpg")
+img2 = img_to_base64("images/bride.jpg")
 
 st.set_page_config(
     page_title="Undangan Pernikahan Muhaimin & Nabila",
@@ -132,14 +133,14 @@ else:
     """, unsafe_allow_html=True)
 
     with col2:
-        st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
-        c1, c2, c3 = st.columns([1,2,1])
-        with c2:
-            st.image("images/bride.jpg", width=220)
-        st.subheader("Nabila")
-        st.write("Putri Ke-dua dari")
-        st.write("**Bapak Yusuf & Ibu Aminah**")
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown(f"""
+    <div class="mempelai-box">
+        <img src="data:image/jpeg;base64,{img2}" class="foto-mempelai">
+        <h3>Nabila</h3>
+        <p>Putri Kedua dari</p>
+        <p><strong>Bapak Yusuf & Ibu Aminah</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.divider()
 
