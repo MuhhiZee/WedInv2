@@ -2,6 +2,22 @@ import streamlit as st
 import base64
 from pathlib import Path
 
+def img_to_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+img = img_to_base64("images/groom.jpg")
+
+st.markdown(f"""
+<div class="mempelai-box">
+    <img src="data:image/jpeg;base64,{img}" class="foto-mempelai">
+
+    <h3>Andi Pratama</h3>
+    <p>Putra Pertama dari</p>
+    <p><strong>Bapak Ahmad & Ibu Nur</strong></p>
+</div>
+""", unsafe_allow_html=True)
+
 st.set_page_config(
     page_title="Undangan Pernikahan Muhaimin & Nabila",
     page_icon="💍",
@@ -116,17 +132,15 @@ else:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
+        st.markdown(f"""
+    <div class="mempelai-box">
+        <img src="data:image/jpeg;base64,{img}" class="foto-mempelai">
 
-        c1, c2, c3 = st.columns([1,2,1])
-        with c2:
-            st.image("images/groom.jpg", width=220)
-
-        st.subheader("Muhaimin")
-        st.write("Anak ke-empat dari")
-        st.write("**Bapak Imran & Ibu Nur**")
-
-        st.markdown("</div>", unsafe_allow_html=True)
+        <h3>Andi Pratama</h3>
+        <p>Putra Pertama dari</p>
+        <p><strong>Bapak Ahmad & Ibu Nur</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
 
     with col2:
         st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
