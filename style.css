@@ -1,18 +1,101 @@
-/* Mengimpor font estetik untuk undangan pernikahan */
+/* Import Font Premium & Romantis */
 @import url('https://googleapis.com');
 
-/* Mengatur wadah utama agar teks berada di tengah dengan rapi */
-.stMarkdown {
-    font-family: 'Playfair Display', serif;
+/* Global Font Override */
+.stMarkdown, div[data-testid="stMarkdownContainer"] {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2F3E36;
 }
 
-/* Mempercantik tombol bawaan Streamlit agar bernuansa emas */
-button[kind="primary"], button[kind="secondary"] {
+/* Card Transparan Efek Kaca (Sampul Depan) */
+.wedding-card {
+    text-align: center; 
+    padding: 60px 25px; 
+    background: rgba(255, 255, 255, 0.75); 
+    border-radius: 20px; 
+    box-shadow: 0 10px 40px rgba(46, 90, 68, 0.1); 
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    max-width: 550px; 
+    margin: auto;
+}
+
+/* Tipografi Judul */
+.title-sub {
+    color: #C79A5D; 
+    font-weight: 400; 
+    letter-spacing: 4px; 
+    font-size: 0.95rem; 
+    text-transform: uppercase;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.title-main {
+    font-size: 4rem; 
+    color: #2E5A44; 
+    margin: 10px 0; 
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.wedding-divider {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #C79A5D, rgba(0, 0, 0, 0)); 
+    margin: 25px 0;
+}
+
+.guest-text {
+    color: #556B2F; 
+    font-size: 1rem; 
+    font-style: italic;
+}
+
+.guest-name {
+    color: #2E5A44; 
+    margin: 10px 0 15px 0; 
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Kotak Layout Mempelai */
+.mempelai-box {
+    text-align: center; 
+    background: rgba(255, 255, 255, 0.6); 
+    padding: 30px; 
+    border-radius: 15px; 
+    border: 1px solid rgba(199, 154, 93, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.mempelai-box img {
+    border-radius: 50%;
+    border: 3px solid #C79A5D;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Kustomisasi Judul Section Header Streamlit (h1, h2, h3) */
+h1, h2, h3 {
+    color: #2E5A44 !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Mengubah Tombol Bawaan Menjadi Hijau Sage Elegan */
+button[kind="secondary"], button[kind="primary"] {
+    background-color: #2E5A44 !important;
+    color: #FFFFFF !important;
+    border-radius: 30px !important;
+    border: 1px solid #2E5A44 !important;
+    font-weight: 500 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    padding: 12px 35px !important;
+    box-shadow: 0 4px 15px rgba(46, 90, 68, 0.25) !important;
+    transition: 0.3s ease;
+}
+
+button[kind="secondary"]:hover, button[kind="primary"]:hover {
     background-color: #C79A5D !important;
-    color: white !important;
-    border-radius: 20px !important;
-    border: none !important;
-    font-weight: bold !important;
-    padding: 10px 25px !important;
-    box-shadow: 0 4px 10px rgba(199, 154, 93, 0.3) !important;
+    border-color: #C79A5D !important;
+    box-shadow: 0 4px 15px rgba(199, 154, 93, 0.4) !important;
 }
