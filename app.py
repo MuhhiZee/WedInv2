@@ -8,16 +8,6 @@ def img_to_base64(path):
 
 img = img_to_base64("images/groom.jpg")
 
-st.markdown(f"""
-<div class="mempelai-box">
-    <img src="data:image/jpeg;base64,{img}" class="foto-mempelai">
-
-    <h3>Andi Pratama</h3>
-    <p>Putra Pertama dari</p>
-    <p><strong>Bapak Ahmad & Ibu Nur</strong></p>
-</div>
-""", unsafe_allow_html=True)
-
 st.set_page_config(
     page_title="Undangan Pernikahan Muhaimin & Nabila",
     page_icon="💍",
