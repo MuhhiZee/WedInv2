@@ -102,7 +102,7 @@ else:
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
-        <div style='text-align: center; padding: 20px 0;'>
+        <div style='text-align: center; padding: 5px 0;'>
             <h3 class="title-sub">THE WEDDING OF</h3>
             <h1 class="title-main" style="font-size: 4.5rem;">Andi & Siti</h1>
         </div>
@@ -118,16 +118,16 @@ else:
     with col1:
         st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
         st.image("images/groom.jpg", width=220)
-        st.subheader("Andi Pratama")
-        st.write("Putra Pertama dari")
-        st.write("**Bapak Ahmad & Ibu Nur**")
+        st.subheader("Muhaimin")
+        st.write("Anak Ke-empat dari")
+        st.write("**Bapak Ali & Ibu Nur**")
         st.markdown("</div>", unsafe_allow_html=True)
 
     with col2:
         st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
         st.image("images/bride.jpg", width=220)
-        st.subheader("Siti Rahma")
-        st.write("Putri Pertama dari")
+        st.subheader("Nabila")
+        st.write("Putri Ke-dua dari")
         st.write("**Bapak Yusuf & Ibu Aminah**")
         st.markdown("</div>", unsafe_allow_html=True)
 
