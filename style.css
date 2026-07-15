@@ -2,31 +2,30 @@
 /*@import url('https://googleapis.com');*/
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
-header {
-    visibility: hidden;
-    height: 0;
+/* Hilangkan header Streamlit */
+header[data-testid="stHeader"] {
+    display: none;
 }
 
-footer {
-    visibility: hidden;
-}
-
-#MainMenu {
-    visibility: hidden;
-}
-
+/* Hilangkan toolbar kanan atas */
 [data-testid="stToolbar"] {
     display: none !important;
 }
 
+/* Hilangkan tombol Deploy */
 [data-testid="stDecoration"] {
     display: none !important;
 }
 
-.stApp {
-    margin-top: 0;
+/* Hilangkan menu utama */
+#MainMenu {
+    visibility: hidden;
 }
 
+/* Hilangkan footer */
+footer {
+    visibility: hidden;
+}
 /* Global Font Override */
 .stMarkdown, div[data-testid="stMarkdownContainer"] {
     font-family: 'Plus Jakarta Sans', sans-serif;
