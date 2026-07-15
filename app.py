@@ -99,16 +99,6 @@ if not st.session_state.terbuka:
 # TAMPILAN 2: ISI UTAMA UNDANGAN (AKSESIBEL SETELAH DIKLIK)
 # ====================================================================
 else:
-    # --- PROSES AUTO-PLAY AUDIO ---
-    audio_file = "music/wed.mp3"
-    try:
-        with open(audio_file, "rb") as f:
-            audio_bytes = f.read()
-        st.audio(audio_bytes, format="audio/mp3", start_time=15, autoplay=True, loop=True)
-    except FileNotFoundError:
-        # Fallback online jika file lokal belum siap/kosong
-        st.audio("https://soundhelix.com", format="audio/mp3", autoplay=True, loop=True)
-
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
@@ -212,3 +202,14 @@ else:
     st.header("🎁 Wedding Gift")
     st.code("BCA\n1234567890\n\na.n Andi Pratama")
     st.caption("Terima kasih atas doa dan restunya ❤️")
+
+    # --- PROSES AUTO-PLAY AUDIO ---
+    audio_file = "music/wed.mp3"
+    try:
+        with open(audio_file, "rb") as f:
+            audio_bytes = f.read()
+        st.audio(audio_bytes, format="audio/mp3", start_time=15, autoplay=True, loop=True)
+    except FileNotFoundError:
+        # Fallback online jika file lokal belum siap/kosong
+        st.audio("https://soundhelix.com", format="audio/mp3", autoplay=True, loop=True)
+
