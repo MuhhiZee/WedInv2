@@ -1,0 +1,18 @@
+/* Mengimpor font estetik untuk undangan pernikahan */
+@import url('https://googleapis.com');
+
+/* Mengatur wadah utama agar teks berada di tengah dengan rapi */
+.stMarkdown {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Mempercantik tombol bawaan Streamlit agar bernuansa emas */
+button[kind="primary"], button[kind="secondary"] {
+    background-color: #C79A5D !important;
+    color: white !important;
+    border-radius: 20px !important;
+    border: none !important;
+    font-weight: bold !important;
+    padding: 10px 25px !important;
+    box-shadow: 0 4px 10px rgba(199, 154, 93, 0.3) !important;
+}
