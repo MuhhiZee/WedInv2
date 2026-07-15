@@ -78,7 +78,7 @@ if not st.session_state.terbuka:
 # ====================================================================
 else:
     # --- PROSES AUTO-PLAY AUDIO ---
-    audio_file = "musik/wed.mp3"
+    audio_file = "music/wed.mp3"
     try:
         with open(audio_file, "rb") as f:
             audio_bytes = f.read()
