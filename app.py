@@ -104,7 +104,7 @@ else:
     try:
         with open(audio_file, "rb") as f:
             audio_bytes = f.read()
-        st.audio(audio_bytes, format="audio/mp3", autoplay=True, loop=True)
+        st.audio(audio_bytes, format="audio/mp3", start_time=15, autoplay=True, loop=True)
     except FileNotFoundError:
         # Fallback online jika file lokal belum siap/kosong
         st.audio("https://soundhelix.com", format="audio/mp3", autoplay=True, loop=True)
