@@ -44,8 +44,9 @@ def set_bg(desktop_img, mobile_img):
 
     </style>
     """, unsafe_allow_html=True)
-    except FileNotFoundError:
-        st.warning("⚠️ File 'images/background.jpg' tidak ditemukan. Menggunakan warna dasar.")
+    
+    #except FileNotFoundError:
+    #   st.warning("⚠️ File 'images/background.jpg' tidak ditemukan. Menggunakan warna dasar.")
 
 # Mengaplikasikan gambar latar belakang tema watercolor hijau-emas
 set_bg(
