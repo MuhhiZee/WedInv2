@@ -126,6 +126,10 @@ button[kind="secondary"]:hover, button[kind="primary"]:hover {
     box-shadow: 0 4px 15px rgba(199, 154, 93, 0.4) !important;
 }
 
+/* Hilangkan padding default Streamlit */
 .block-container {
-    padding-top: 0 !important;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
 }
