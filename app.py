@@ -9,28 +9,49 @@ st.set_page_config(
 )
 
 # --- FUNGSI MERENDER GAMBAR LATAR (BACKGROUND) VIA CSS ---
-def set_bg_from_local(image_file):
-    try:
-        with open(image_file, "rb") as f:
-            encoded_string = base64.b64encode(f.read()).decode()
-        st.markdown(
-            f"""
-            <style>
-            .stApp {{
-                background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)), url("data:image/jpg;base64,{encoded_string}");
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-            }}
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+def set_bg(desktop_img, mobile_img):
+    with open(desktop_img, "rb") as f:
+        desktop = base64.b64encode(f.read()).decode()
+
+    with open(mobile_img, "rb") as f:
+        mobile = base64.b64encode(f.read()).decode()
+
+    st.markdown(f"""
+    <style>
+
+    .stApp {{
+        background-image:
+            linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.45)),
+            url("data:image/jpeg;base64,{desktop}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
+
+    @media (max-width:768px) {{
+
+        .stApp {{
+            background-image:
+                linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.45)),
+                url("data:image/jpeg;base64,{mobile}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+        }}
+
+    }}
+
+    </style>
+    """, unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("⚠️ File 'images/background.jpg' tidak ditemukan. Menggunakan warna dasar.")
 
 # Mengaplikasikan gambar latar belakang tema watercolor hijau-emas
-set_bg_from_local("images/background.jpg")
+set_bg(
+    "images/background.jpg",
+    "images/background1.jpg"
+)
 
 # Load CSS Eksternal
 def load_css():
