@@ -3,7 +3,7 @@ import base64
 from pathlib import Path
 
 st.set_page_config(
-    page_title="Undangan Pernikahan Andi & Siti",
+    page_title="Undangan Pernikahan Muhaimin & Nabila",
     page_icon="💍",
     layout="wide"
 )
@@ -117,15 +117,22 @@ else:
 
     with col1:
         st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
-        st.image("images/groom.jpg", width=220)
+
+        c1, c2, c3 = st.columns([1,2,1])
+        with c2:
+            st.image("images/groom.jpg", width=220)
+
         st.subheader("Muhaimin")
-        st.write("Anak Ke-empat dari")
-        st.write("**Bapak Ali & Ibu Nur**")
+        st.write("Anak ke-empat dari")
+        st.write("**Bapak Imran & Ibu Nur**")
+
         st.markdown("</div>", unsafe_allow_html=True)
 
     with col2:
         st.markdown("<div class='mempelai-box'>", unsafe_allow_html=True)
-        st.image("images/bride.jpg", width=220)
+        c1, c2, c3 = st.columns([1,2,1])
+        with c2:
+            st.image("images/bride.jpg", width=220)
         st.subheader("Nabila")
         st.write("Putri Ke-dua dari")
         st.write("**Bapak Yusuf & Ibu Aminah**")
