@@ -108,16 +108,39 @@ if not st.session_state.terbuka:
 # TAMPILAN 2: ISI UTAMA UNDANGAN (AKSESIBEL SETELAH DIKLIK)
 # ====================================================================
 else:
-    # Read the HTML file content
+    # --- OPENING ANIMASI FULL LAYAR ---
     try:
         with open(path_to_html, 'r', encoding='utf-8') as file:
             html_content = file.read()
-    
-        # Render the HTML content in the Streamlit app
-        # Set height and scrolling to ensure full visibility
-        components.html(html_content, height=720, scrolling=True)
+
+        # Hapus padding khusus untuk opening
+        st.markdown("""
+        <style>
+            .block-container {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                max-width: 100% !important;
+            }
+            /* Bikin iframe opening benar-benar full */
+            iframe {
+                width: 100vw !important;
+                height: 100vh !important;
+                height: 100dvh !important;
+                border: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                display: block;
+            }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        # height 1000 + scrolling=False = kunci biar fit
+        components.html(html_content, height=1000, scrolling=False)
+        
     except FileNotFoundError:
-        st.error("HTML file not found. Please check the file path.")
+        st.error("HTML file openingfit.html tidak ditemukan")
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
