@@ -11,11 +11,11 @@ img = img_to_base64("images/groom.jpg")
 img2 = img_to_base64("images/bride.jpg")
 path_to_html = "assets/openingfit2.html"
 
-st.set_page_config(
+'''st.set_page_config(
     page_title="Undangan Pernikahan Muhaimin & Nabila",
     page_icon="💍",
     layout="wide"
-)
+)'''
 
 # --- FUNGSI MERENDER GAMBAR LATAR (BACKGROUND) VIA CSS ---
 def set_bg(desktop_img, mobile_img):
