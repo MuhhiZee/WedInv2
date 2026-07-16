@@ -110,11 +110,17 @@ if not st.session_state.terbuka:
 else:
     # --- OPENING ANIMASI FULL LAYAR - VERSI ANTI BLOCK SCROLL ---
     try:
-        with open(path_to_html, 'r', encoding='utf-8') as file:
-            html_content = file.read()
-        
-        # Pakai st.markdown biar tidak jadi iframe yang nahan scroll
-        st.markdown(html_content, unsafe_allow_html=True)
+        # BACA FILE HTML
+with open(path_to_html, 'r', encoding='utf-8') as f:
+    raw_html = f.read()
+
+# AMBIL ISI <style> dan <body> nya saja
+# Tempel langsung sebagai markdown biar tidak jadi iframe
+st.markdown(f"""
+<div style="width:100vw; height:100vh; height:100dvh; margin-left:-1rem; margin-top:-1rem; position:relative; overflow:hidden;">
+    {raw_html}
+</div>
+""", unsafe_allow_html=True)
         
     except FileNotFoundError:
         st.error("HTML file openingfit.html tidak ditemukan di folder assets/")
