@@ -108,24 +108,22 @@ if not st.session_state.terbuka:
 # TAMPILAN 2: ISI UTAMA UNDANGAN (AKSESIBEL SETELAH DIKLIK)
 # ====================================================================
 else:
-    # --- OPENING ANIMASI FULL LAYAR - VERSI ANTI BLOCK SCROLL ---
-    try:
-        # BACA FILE HTML
-        with open(path_to_html, 'r', encoding='utf-8') as f:
-            raw_html = f.read()
+    # --- OPENING FIT - VERSI BERSIH ---
+    with open("assets/openingfit3.html", "r", encoding="utf-8") as f:
+        opening_html = f.read()
+    
+    st.markdown(opening_html, unsafe_allow_html=True)
 
-        # AMBIL ISI <style> dan <body> nya saja
-        # Tempel langsung sebagai markdown biar tidak jadi iframe
-        st.markdown(f"""
-        <div style="width:100vw; height:100vh; height:100dvh; margin-left:-1rem; margin-top:-1rem; position:relative; overflow:hidden;">
-            {raw_html}
+    # --- LANJUTAN KONTEN ---
+    st.markdown(
+        """
+        <div style='text-align: center; padding: 20px 0;'>
+            <h3 class="title-sub">THE WEDDING OF</h3>
+            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
         </div>
-        """, unsafe_allow_html=True)
-        
-    except FileNotFoundError:
-        st.error("HTML file openingfit.html tidak ditemukan di folder assets/")
-    except Exception as e:
-        st.error(f"Error load opening: {e}")
+        """,
+        unsafe_allow_html=True
+    )
 
     # Jarak biar tidak nempel
     st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
