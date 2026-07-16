@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import base64
 from pathlib import Path
 
@@ -8,6 +9,7 @@ def img_to_base64(path):
 
 img = img_to_base64("images/groom.jpg")
 img2 = img_to_base64("images/bride.jpg")
+path_to_html = "assets/opening2.html"
 
 st.set_page_config(
     page_title="Undangan Pernikahan Muhaimin & Nabila",
@@ -106,6 +108,16 @@ if not st.session_state.terbuka:
 # TAMPILAN 2: ISI UTAMA UNDANGAN (AKSESIBEL SETELAH DIKLIK)
 # ====================================================================
 else:
+    # Read the HTML file content
+    try:
+        with open(path_to_html, 'r', encoding='utf-8') as file:
+            html_content = file.read()
+    
+        # Render the HTML content in the Streamlit app
+        # Set height and scrolling to ensure full visibility
+        components.html(html_content, height=600, scrolling=True)
+    except FileNotFoundError:
+        st.error("HTML file not found. Please check the file path.")
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
