@@ -108,36 +108,16 @@ if not st.session_state.terbuka:
 # TAMPILAN 2: ISI UTAMA UNDANGAN (AKSESIBEL SETELAH DIKLIK)
 # ====================================================================
 else:
-    # --- OPENING FIT - VERSI BERSIH ---
-    with open("assets/openingfit3.html", "r", encoding="utf-8") as f:
-        opening_html = f.read()
+    # Read the HTML file content
+    try:
+        with open(path_to_html, 'r', encoding='utf-8') as file:
+            html_content = file.read()
     
-    st.markdown(opening_html, unsafe_allow_html=True)
-
-    # --- LANJUTAN KONTEN ---
-    st.markdown(
-        """
-        <div style='text-align: center; padding: 20px 0;'>
-            <h3 class="title-sub">THE WEDDING OF</h3>
-            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # Jarak biar tidak nempel
-    st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
-
-    # --- KONTEN HEADER UTAMA ---
-    st.markdown(
-        """
-        <div style='text-align: center; padding: 20px 0;'>
-            <h3 class="title-sub">THE WEDDING OF</h3>
-            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        # Render the HTML content in the Streamlit app
+        # Set height and scrolling to ensure full visibility
+        components.html(html_content, height=720, scrolling=True)
+    except FileNotFoundError:
+        st.error("HTML file not found. Please check the file path.")
     
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
