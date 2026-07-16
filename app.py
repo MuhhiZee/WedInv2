@@ -108,14 +108,33 @@ if not st.session_state.terbuka:
 # TAMPILAN 2: ISI UTAMA UNDANGAN (AKSESIBEL SETELAH DIKLIK)
 # ====================================================================
 else:
-    # --- OPENING ANIMASI FULL LAYAR ---
+    # --- OPENING ANIMASI FULL LAYAR - VERSI ANTI BLOCK SCROLL ---
     try:
         with open(path_to_html, 'r', encoding='utf-8') as file:
             html_content = file.read()
-
-        # Hapus padding khusus untuk opening
-                # FIX: Biar fit tapi tetap bisa scroll halaman bawahnya
+        
+        # Pakai st.markdown biar tidak jadi iframe yang nahan scroll
         st.markdown(html_content, unsafe_allow_html=True)
+        
+    except FileNotFoundError:
+        st.error("HTML file openingfit.html tidak ditemukan di folder assets/")
+    except Exception as e:
+        st.error(f"Error load opening: {e}")
+
+    # Jarak biar tidak nempel
+    st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
+
+    # --- KONTEN HEADER UTAMA ---
+    st.markdown(
+        """
+        <div style='text-align: center; padding: 20px 0;'>
+            <h3 class="title-sub">THE WEDDING OF</h3>
+            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
