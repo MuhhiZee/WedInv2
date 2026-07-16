@@ -9,7 +9,7 @@ def img_to_base64(path):
 
 img = img_to_base64("images/groom.jpg")
 img2 = img_to_base64("images/bride.jpg")
-path_to_html = "assets/openingfit2.html"
+path_to_html = "assets/openingfit3.html"
 
 st.set_page_config(
     page_title="Undangan Pernikahan Muhaimin & Nabila",
