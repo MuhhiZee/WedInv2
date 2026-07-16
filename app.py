@@ -115,7 +115,7 @@ else:
     
         # Render the HTML content in the Streamlit app
         # Set height and scrolling to ensure full visibility
-        components.html(html_content, height=950, scrolling=True)
+        components.html(html_content, height=720, scrolling=True)
     except FileNotFoundError:
         st.error("HTML file not found. Please check the file path.")
     # --- KONTEN HEADER UTAMA ---
