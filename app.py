@@ -137,7 +137,7 @@ else:
         """, unsafe_allow_html=True)
         
         # height 1000 + scrolling=False = kunci biar fit
-        components.html(html_content, height=1000, scrolling=False)
+        components.html(html_content, height=850, scrolling=False)
         
     except FileNotFoundError:
         st.error("HTML file openingfit.html tidak ditemukan")
