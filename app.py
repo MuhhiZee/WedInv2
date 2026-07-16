@@ -115,37 +115,7 @@ else:
 
         # Hapus padding khusus untuk opening
                 # FIX: Biar fit tapi tetap bisa scroll halaman bawahnya
-        st.markdown("""
-        <style>
-            /* Hanya hapus padding atas, jangan kunci scroll */
-            [data-testid="stAppViewContainer"] {
-                overflow: auto !important;
-            }
-            .block-container {
-                padding: 0 !important;
-                max-width: 100% !important;
-            }
-            /* Target iframe opening saja */
-            [data-testid="stCustomComponentV1"] {
-                width: 100vw !important;
-                height: 100vh !important;
-                height: 100dvh !important;
-                margin-left: -1rem !important; /* lawan padding default streamlit */
-            }
-            [data-testid="stCustomComponentV1"] iframe {
-                width: 100% !important;
-                height: 100% !important;
-                border: none !important;
-            }
-        </style>
-        """, unsafe_allow_html=True)
-
-        # PENTING: scrolling=False biar di dalam opening tidak ada scroll dobel
-        # tapi halaman luar tetap bisa scroll
-        components.html(html_content, height=850, scrolling=True)
-    
-    except FileNotFoundError:
-        st.error("HTML file openingfit.html tidak ditemukan")
+        st.markdown(html_content, unsafe_allow_html=True)
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
