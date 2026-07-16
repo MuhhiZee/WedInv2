@@ -142,7 +142,7 @@ else:
 
         # PENTING: scrolling=False biar di dalam opening tidak ada scroll dobel
         # tapi halaman luar tetap bisa scroll
-        components.html(html_content, height=850, scrolling=False)
+        components.html(html_content, height=850, scrolling=True)
     
     except FileNotFoundError:
         st.error("HTML file openingfit.html tidak ditemukan")
