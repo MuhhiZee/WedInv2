@@ -1,5 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
+from streamlit_iframe_auto_height import iframe
 import base64
 from pathlib import Path
 
