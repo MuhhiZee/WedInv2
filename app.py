@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from streamlit_iframe_auto_height import iframe
 import base64
 from pathlib import Path
 
@@ -116,7 +115,7 @@ else:
     
         # Render the HTML content in the Streamlit app
         # Set height and scrolling to ensure full visibility
-        components.html(html_content, height=720, scrolling=True)
+        components.html(html_content, height=1000, scrolling=False)
     except FileNotFoundError:
         st.error("HTML file not found. Please check the file path.")
     
