@@ -128,8 +128,8 @@ button[kind="secondary"]:hover, button[kind="primary"]:hover {
 
 /* Hilangkan padding default Streamlit */
 .block-container {
-    padding-top: -6rem !important;
+    padding-top: 6rem !important;
     padding-bottom: 0rem !important;
     padding-left: 0rem !important;
-    padding-right: -2rem !important;
+    padding-right: 5rem !important;
 }
