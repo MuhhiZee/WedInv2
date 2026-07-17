@@ -122,7 +122,7 @@ else:
     # --- KONTEN HEADER UTAMA ---
     st.markdown(
         """
-        <div style='text-align: center; padding: 20px 0;'>
+        <div style='text-align: center; padding: 0px 0;'>
             <h3 class="title-sub">THE WEDDING OF</h3>
             <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
         </div>
