@@ -3,33 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 
-/* 1. Hilangin elemen atas Streamlit */
 header[data-testid="stHeader"],
 div[data-testid="stToolbar"],
 div[data-testid="stDecoration"],
-#MainMenu,
-footer {
+#MainMenu {
     display: none !important;
     height: 0 !important;
-    min-height: 0 !important;
-    }
-    
-    /* 2. Hapus padding & margin container */
-.main .block-container {
+}
+
+.block-container {
     padding: 0 !important;
     max-width: 100% !important;
-    }
     
-.stApp, .main {
-    margin: 0 !important;
-    padding-top: 0 !important;
-    }
-    
-    /* 3. Biar iframe components.html juga full */
-.element-container iframe {
-    width: 100vw !important;
-    }
-/* Global Font Override */
+}/* Global Font Override */
 .stMarkdown, div[data-testid="stMarkdownContainer"] {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #2F3E36;
