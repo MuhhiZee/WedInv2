@@ -115,7 +115,7 @@ else:
     
         # Render the HTML content in the Streamlit app
         # Set height and scrolling to ensure full visibility
-        components.html(html_content, height=900, scrolling=False)
+        components.html(html_content, height=800, scrolling=False)
     except FileNotFoundError:
         st.error("HTML file not found. Please check the file path.")
     
