@@ -116,6 +116,7 @@ button[kind="secondary"], button[kind="primary"] {
     font-weight: 500 !important;
     font-family: 'Plus Jakarta Sans', sans-serif !important;
     padding: 12px 35px !important;
+    margin: 10px 0 15px 0;
     box-shadow: 0 4px 15px rgba(46, 90, 68, 0.25) !important;
     transition: 0.3s ease;
 }
