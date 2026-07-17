@@ -1,1 +1,2 @@
-streamlit-iframe-auto-height
+streamlit>=1.28.0
+streamlit-iframe-auto-height>=0.1.0
