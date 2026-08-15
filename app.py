@@ -92,7 +92,7 @@ if not st.session_state.terbuka:
         f"""
         <div class="wedding-card">
             <h3 class="title-sub">THE WEDDING OF</h3>
-            <h1 class="title-main">Muhaimin & Nabila</h1>
+            <h1 class="title-main">Muhaimin & Rezky</h1>
             <div class="wedding-divider"></div>
             <p class="guest-text">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
             <h2 class="guest-name">{guest}</h2>
@@ -124,7 +124,7 @@ else:
         """
         <div style='text-align: center; padding: 0px 0;'>
             <h3 class="title-sub">THE WEDDING OF</h3>
-            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
+            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Rezky</h1>
         </div>
         """,
         unsafe_allow_html=True
