@@ -92,7 +92,7 @@ if not st.session_state.terbuka:
         f"""
         <div class="wedding-card">
             <h3 class="title-sub">THE WEDDING OF</h3>
-            <h1 class="title-main">Muhaimin & Rezky</h1>
+            <h1 class="title-main">Muhaimin & Nabila</h1>
             <div class="wedding-divider"></div>
             <p class="guest-text">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
             <h2 class="guest-name">{guest}</h2>
@@ -124,7 +124,7 @@ else:
         """
         <div style='text-align: center; padding: 0px 0;'>
             <h3 class="title-sub">THE WEDDING OF</h3>
-            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Rezky</h1>
+            <h1 class="title-main" style="font-size: 4.5rem;">Muhaimin & Nabila</h1>
         </div>
         """,
         unsafe_allow_html=True
@@ -139,9 +139,9 @@ else:
         st.markdown(f"""
     <div class="mempelai-box">
         <img src="data:image/jpeg;base64,{img}" class="foto-mempelai">
-        <h3>Andi Pratama</h3>
-        <p>Putra Pertama dari</p>
-        <p><strong>Bapak Ahmad & Ibu Nur</strong></p>
+        <h3>Muhaimin</h3>
+        <p>Putra Keempat dari</p>
+        <p><strong>Bapak Yusuf & Ibu Nur</strong></p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -151,7 +151,7 @@ else:
         <img src="data:image/jpeg;base64,{img2}" class="foto-mempelai">
         <h3>Nabila</h3>
         <p>Putri Kedua dari</p>
-        <p><strong>Bapak Yusuf & Ibu Aminah</strong></p>
+        <p><strong>Bapak Ahmad & Ibu Aminah</strong></p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -163,7 +163,7 @@ else:
     **Hari** : Minggu  
     **Tanggal** : 20 Desember 2026  
     **Pukul** : 09.00 WIB  
-    **Lokasi** : Gedung Serbaguna Makassar
+    **Lokasi** : Gedung Marika, Kab. Gowa
     """)
 
     st.header("🎉 Resepsi")
@@ -171,7 +171,7 @@ else:
     **Hari** : Minggu  
     **Tanggal** : 20 Desember 2026  
     **Pukul** : 11.00 WIB  
-    **Lokasi** : Gedung Serbaguna Makassar
+    **Lokasi** : Gedung Marika, Kab. Gowa
     """)
 
     st.divider()
@@ -224,7 +224,7 @@ else:
 
     # Hadiah Digital
     st.header("🎁 Wedding Gift")
-    st.code("BCA\n1234567890\n\na.n Andi Pratama")
+    st.code("BCA\n1234567890\n\na.n Muhaimin")
     st.caption("Terima kasih atas doa dan restunya ❤️")
 
     # --- PROSES AUTO-PLAY AUDIO ---
