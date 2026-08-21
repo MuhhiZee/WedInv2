@@ -132,6 +132,22 @@ else:
 
     st.divider()
 
+    st.header()
+    st.markdown(
+        """
+        <h2 style='text-align:center; color:#2E5A44; font-family:"Playfair Display", serif; font-size: 2.5rem; letter-spacing: 2px;'>
+        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
+            agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. 
+          Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+
+        **QS. Ar-Rum [30]: 21**
+        </h2>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.divider()
+    
     # Mempelai
     col1, col2 = st.columns(2)
 
